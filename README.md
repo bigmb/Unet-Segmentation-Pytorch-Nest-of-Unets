@@ -9,3 +9,5 @@ Implementation of different kinds of Unet Models for Image Segmentation
 
 With Layer Visualization
 
+#to do - write summary with results - will be completed by 31st May.
+
