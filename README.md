@@ -64,8 +64,4 @@ Install all dependent libraries:
   
   
   **Nested Unet**
-  ![nested](/images/nested.png)
-  
-  
-  **RCNN Unet**
-  ![](/images/)
+  ![nested](/images/nested.jpg)
