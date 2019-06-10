@@ -14,7 +14,7 @@ import torchvision
 import matplotlib.pyplot as plt
 import natsort
 from torch.utils.data.sampler import SubsetRandomSampler
-from Data_Loader_96 import Images_Dataset, Images_Dataset_folder
+from Data_Loader import Images_Dataset, Images_Dataset_folder
 import torchsummary
 #from torch.utils.tensorboard import SummaryWriter
 #from tensorboardX import SummaryWriter
@@ -29,16 +29,6 @@ import time
 #from ploting import VisdomLinePlotter
 #from visdom import Visdom
 
-
-#######################################################
-#to make sure you want to run the program
-######################################################
-x = 'yes'
-#x = input('start the model training: ')
-if x == 'yes':
-    pass
-else:
-    exit()
 
 #######################################################
 #Checking if GPU is used
@@ -107,14 +97,14 @@ model_test.to(device)
 #Getting the Summary of Model
 #######################################################
 
-#torchsummary.summary(model_test, input_size=(3, 128, 128))
+torchsummary.summary(model_test, input_size=(3, 128, 128))
 
 #######################################################
 #Passing the Dataset of Images and Labels
 #######################################################
 
 t_data = '/flush1/bat161/segmentation/New_Trails/venv/DATA/new_3C_I_ori/'
-l_data = '/flush1/bat161/segmentation/New_Trails/venv/DATA/new_3C_L_ori/' #check with both labels
+l_data = '/flush1/bat161/segmentation/New_Trails/venv/DATA/new_3C_L_ori/'
 test_image = '/flush1/bat161/segmentation/New_Trails/venv/DATA/test_new_3C_I_ori/0131_0009.png'
 test_label = '/flush1/bat161/segmentation/New_Trails/venv/DATA/test_new_3C_L_ori/0131_0009.png'
 test_folderP = '/flush1/bat161/segmentation/New_Trails/venv/DATA/test_new_3C_I_ori/*'
@@ -129,7 +119,7 @@ Training_Data = Images_Dataset_folder(t_data,
 
 data_transform = torchvision.transforms.Compose([
           #  torchvision.transforms.Resize((128,128)),
-            torchvision.transforms.CenterCrop(96),
+         #   torchvision.transforms.CenterCrop(96),
             torchvision.transforms.ToTensor(),
             torchvision.transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
         ])
@@ -513,7 +503,7 @@ for i in range(len(read_test_folder)):
 
 data_transform = torchvision.transforms.Compose([
           #  torchvision.transforms.Resize((128,128)),
-            torchvision.transforms.CenterCrop(96),
+        #    torchvision.transforms.CenterCrop(96),
              torchvision.transforms.Grayscale(),
 #            torchvision.transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
         ])
@@ -563,257 +553,7 @@ for i in range(len(read_test_folderP)):
 
 
 print('Dice Score : ' + str(dice_score123/len(read_test_folderP)))
-print(x_count)
-print(x_dice)
-print('Dice Score : ' + str(float(x_dice/(len(read_test_folderP)-x_count))))
+#print(x_count)
+#print(x_dice)
+#print('Dice Score : ' + str(float(x_dice/(len(read_test_folderP)-x_count))))
 
-
-###############################################
-#To Get the list of empty laebls
-###############################################
-
-list_blank_labels = []
-
-import scipy
-i = 0
-j= 0
-i2 = -1
-for i in range(len(x_sort_testL)):
-    x1 = x_sort_testL[i]
-    x2 = scipy.misc.imread(x1)
-    x2_flat = x2.reshape(-1, 1)
-
-    for j in range(x2_flat.shape[0]):
-        if x2_flat[j] != 0:
-            list_blank_labels.append(i)
-            break
-        else:
-            pass
-
-dice_score_new = 0.0
-x_count = 0
-x_dice = 0
-
-for i in range(len(list_blank_labels)):
-    xI = Image.open(x_sort_testP[list_blank_labels[i]])
-    xL = Image.open(x_sort_testL[list_blank_labels[i]])
-
-    s = data_transform(xI)
-    s = np.array(s)
-    s = threshold_predictions_v(s)
-
-    s2 = data_transform(xL)
-    s3 = np.array(s2)
-
-    total_new = dice_coeff(s, s3)
-
-    if total_new <= 0.3:
-        x_count += 1
-    if total_new > 0.3:
-        x_dice = x_dice + total_new
-    dice_score_new = dice_score_new + total_new
-
-print(x_dice)
-print('Dice :' + str(dice_score_new/len(list_blank_labels)))
-print('Dice Score New : ' + str(x_dice / (len(list_blank_labels)-x_count)))
-
-###############################################################
-#Evaluation of test Models
-###############################################################
-
-read_folder_test = glob.glob('/flush1/bat161/segmentation/New_Trails/venv/DATA/images/*')
-read_folder_test = sorted(read_folder_test)
-
-read_test_folder_test_cases = './model/test_cases'
-
-
-if os.path.exists(read_test_folder_test_cases) and os.path.isdir(read_test_folder_test_cases):
-    shutil.rmtree(read_test_folder_test_cases)
-
-try:
-    os.mkdir(read_test_folder_test_cases)
-except OSError:
-    print("Creation of the testing directory %s failed" % read_test_folder_test_cases)
-else:
-    print("Successfully created the testing directory %s " % read_test_folder_test_cases)
-
-
-check1 = './model/checking1'
-
-
-if os.path.exists(check1) and os.path.isdir(check1):
-    shutil.rmtree(check1)
-
-try:
-    os.mkdir(check1)
-except OSError:
-    print("Creation of the testing directory %s failed" % check1)
-else:
-    print("Successfully created the testing directory %s " % check1)
-
-
-check2 = './model/checking2'
-
-
-if os.path.exists(check2) and os.path.isdir(check2):
-    shutil.rmtree(check2)
-
-try:
-    os.mkdir(check2)
-except OSError:
-    print("Creation of the testing directory %s failed" % check2)
-else:
-    print("Successfully created the testing directory %s " % check2)
-
-
-check3 = './model/checking3'
-
-
-if os.path.exists(check3) and os.path.isdir(check3):
-    shutil.rmtree(check3)
-
-try:
-    os.mkdir(check3)
-except OSError:
-    print("Creation of the testing directory %s failed" % check3)
-else:
-    print("Successfully created the testing directory %s " % check3)
-
-
-check4 = './model/checking4'
-
-
-if os.path.exists(check4) and os.path.isdir(check4):
-    shutil.rmtree(check4)
-
-try:
-    os.mkdir(check4)
-except OSError:
-    print("Creation of the testing directory %s failed" % check4)
-else:
-    print("Successfully created the testing directory %s " % check4)
-
-
-check5 = './model/checking5'
-
-
-if os.path.exists(check5) and os.path.isdir(check5):
-    shutil.rmtree(check5)
-
-try:
-    os.mkdir(check5)
-except OSError:
-    print("Creation of the testing directory %s failed" % check5)
-else:
-    print("Successfully created the testing directory %s " % check5)
-
-
-check6 = './model/checking6'
-
-
-if os.path.exists(check6) and os.path.isdir(check6):
-    shutil.rmtree(check6)
-
-try:
-    os.mkdir(check6)
-except OSError:
-    print("Creation of the testing directory %s failed" % check6)
-else:
-    print("Successfully created the testing directory %s " % check6)
-
-
-check7 = './model/checking7'
-
-
-if os.path.exists(check7) and os.path.isdir(check7):
-    shutil.rmtree(check7)
-
-try:
-    os.mkdir(check7)
-except OSError:
-    print("Creation of the testing directory %s failed" % check7)
-else:
-    print("Successfully created the testing directory %s " % check7)
-
-
-check8 = './model/checking8'
-
-
-if os.path.exists(check8) and os.path.isdir(check8):
-    shutil.rmtree(check8)
-
-try:
-    os.mkdir(check8)
-except OSError:
-    print("Creation of the testing directory %s failed" % check8)
-else:
-    print("Successfully created the testing directory %s " % check8)
-
-
-check9 = './model/checking9'
-
-
-if os.path.exists(check9) and os.path.isdir(check9):
-    shutil.rmtree(check9)
-
-try:
-    os.mkdir(check9)
-except OSError:
-    print("Creation of the testing directory %s failed" % check9)
-else:
-    print("Successfully created the testing directory %s " % check9)
-
-
-check10 = './model/checking10'
-
-
-if os.path.exists(check10) and os.path.isdir(check10):
-    shutil.rmtree(check10)
-
-try:
-    os.mkdir(check10)
-except OSError:
-    print("Creation of the testing directory %s failed" % check10)
-else:
-    print("Successfully created the testing directory %s " % check10)
-
-
-
-data_transform = torchvision.transforms.Compose([
-          #  torchvision.transforms.Resize((128,128)),
-            torchvision.transforms.CenterCrop(96),
-            torchvision.transforms.ToTensor(),
-            torchvision.transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
-        ])
-
-
-tester=1
-img_test_cases = 0
-
-for i in range(len(read_folder_test)):
-    im = Image.open(read_folder_test[i])
-
-    im1 = im
-    im_n = np.array(im1)
-    im_n_flat = im_n.reshape(-1, 1)
-
-    for j in range(im_n_flat.shape[0]):
-        if im_n_flat[j] != 0:
-            im_n_flat[j] = 255
-
-    s = data_transform(im)
-    pred_test = model_test(s.unsqueeze(0).cuda()).cpu()
-    pred_test = F.sigmoid(pred_test)
-    pred_test = pred_test.detach().numpy()
-
-    #pred = threshold_predictions_v(pred_test)
-
-    if i % 36 == 0:
-        img_test_cases = img_test_cases + 1
-        test1  = test1 + 1
-
-    y1 = plt.imsave('./model/check'+str(test1)/'im_epoch_' + str(epoch) + 'int_' + str(i)
-                    + '_img_no_' + str(img_test_cases) + '.png', pred_test[0][0])
-
-    x1 = plt.imsave('./model/test_cases/im_epoch_' + str(epoch) + 'int_' + str(i)
-		    + '_img_no_' + str(img_test_cases) + '.png', pred_test[0][0])
