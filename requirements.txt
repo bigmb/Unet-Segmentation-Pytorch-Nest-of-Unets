@@ -1,0 +1,11 @@
+python>=3.6
+torch>=0.4.0
+torchvision
+torchsummary
+tensorboardx
+natsort
+numpy
+pillow
+scipy
+scikit-image
+sklearn
