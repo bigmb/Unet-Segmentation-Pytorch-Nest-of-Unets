@@ -97,5 +97,5 @@ Last layer will be saved in the model folder. If any particular layer is require
 
 **Dice Score**
 
-<img src="https://github.com/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets/blob/master/dice.png" width="480">
+<img src="https://github.com/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets/blob/master/dice.png" width="380">
 
