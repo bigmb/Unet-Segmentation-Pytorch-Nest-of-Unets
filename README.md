@@ -75,7 +75,9 @@ Gradient flow can be used too. Taken from (https://discuss.pytorch.org/t/check-g
 Last layer will be saved in the model folder. If any particular layer is required , mention it in the line 361.
 
 **Layer Visulization**
+
 ![l2](/images/l2.png)
 
 **Filter Visulization**
+
 ![filt1](/images/filt1.png)
