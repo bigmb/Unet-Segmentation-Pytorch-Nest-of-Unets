@@ -1,11 +1,20 @@
 # Unet-Segmentation-Pytorch-Nest-of-Unets
 Implementation of different kinds of Unet Models for Image Segmentation
 
-1) UNet
-2) RCNN-UNet
-3) Attention Unet
-4) RCNN-Attention Unet
-5) Nested UNet
+1) UNet - U-Net: Convolutional Networks for Biomedical Image Segmentation
+https://arxiv.org/abs/1505.04597
+
+2) RCNN-UNet - Recurrent Residual Convolutional Neural Network based on U-Net (R2U-Net) for Medical Image Segmentation
+https://arxiv.org/abs/1802.06955
+
+3) Attention Unet - Attention U-Net: Learning Where to Look for the Pancreas
+https://arxiv.org/abs/1804.03999
+
+4) RCNN-Attention Unet - Attention R2U-Net : Just integration of two recent advanced works (R2U-Net + Attention U-Net)
+LeeJun Implementation - https://github.com/LeeJunHyun/Image_Segmentation.git
+
+5) Nested UNet - UNet++: A Nested U-Net Architecture for Medical Image Segmentation
+https://arxiv.org/abs/1807.10165
 
 With Layer Visualization
 
