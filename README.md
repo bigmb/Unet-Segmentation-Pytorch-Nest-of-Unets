@@ -9,5 +9,10 @@ Implementation of different kinds of Unet Models for Image Segmentation
 
 With Layer Visualization
 
-#to do - write summary with results - will be completed by 4th June
+## 1. Getting Started
 
+Clone the repo:
+
+  ```bash
+  git clone https://github.com/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets.git
+  ```
