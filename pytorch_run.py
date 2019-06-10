@@ -3,7 +3,7 @@ import os
 import numpy as np
 from PIL import Image
 import glob
-import SimpleITK as sitk
+#import SimpleITK as sitk
 from torch import optim
 import torch.utils.data
 import torch
