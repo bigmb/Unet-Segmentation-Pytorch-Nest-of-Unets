@@ -47,7 +47,7 @@ Install all dependent libraries:
   ```
 ## 3. Run the file
 
-Add all your folders to this location
+Add all your folders to this line 106-113
 ```
 t_data = '' # Input data
 l_data = '' #Input Label
