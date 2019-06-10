@@ -95,7 +95,7 @@ Last layer will be saved in the model folder. If any particular layer is require
 
 ## 5. Results
 
-**Dice Score**
+**Dice Score for hippocampus segmentation**
 
 <img src="https://github.com/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets/blob/master/dice.png" width="380">
 
