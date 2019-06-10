@@ -91,12 +91,11 @@ Last layer will be saved in the model folder. If any particular layer is require
 
 **b) CenterCrop Image**
 
-![in2](/images/in2.png){:height="50%" width="50%"}
+<img src="https://github.com/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets/blob/master/images/in2.png" width="480">
 
 ## 5. Results
 
 **Dice Score**
 
-![dice](dice.png)
-
+<img src="https://github.com/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets/blob/master/dice.png" width="480">
 
