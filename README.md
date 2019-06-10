@@ -25,3 +25,28 @@ Clone the repo:
   ```bash
   git clone https://github.com/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets.git
   ```
+
+## 2. Requirements
+
+```
+python>=3.6
+torch>=0.4.0
+torchvision
+torchsummary
+tensorboardx
+natsort
+numpy
+pillow
+scipy
+scikit-image
+sklearn
+```
+Install all dependent libraries:
+  ```bash
+  pip install -r requirements.txt
+  ```
+  
+  ## 3. Types of Unet
+  
+  **Unet**
+  ![UNet](/imgages/unet1.png)
