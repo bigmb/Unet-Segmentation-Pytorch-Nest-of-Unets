@@ -83,6 +83,10 @@ Last layer will be saved in the model folder. If any particular layer is require
 
 ![filt1](/images/filt1.png)
 
+**TensorboardX**
+
+<img src="https://github.com/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets/blob/master/images/tensorb.png" width="280">
+
 **Input Image Visulization for checking**
 
 **a) Original Image**
