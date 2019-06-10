@@ -87,7 +87,7 @@ Last layer will be saved in the model folder. If any particular layer is require
 
 **a) Original Image**
 
-![in1](/images/in1.png =250x250)
+![in1](/images/in1.png | width=48)
 
 **b) CenterCrop Image**
 
