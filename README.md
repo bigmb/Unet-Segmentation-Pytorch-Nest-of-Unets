@@ -72,6 +72,7 @@ Install all dependent libraries:
 To plot the loss , Visdom would be required. The code is already written, just uncomment the required part.
 Gradient flow can be used too. Taken from (https://discuss.pytorch.org/t/check-gradient-flow-in-network/15063/10)
 
+A model folder is created and all the data is stored inside that.
 Last layer will be saved in the model folder. If any particular layer is required , mention it in the line 361.
 
 **Layer Visulization**
@@ -81,3 +82,10 @@ Last layer will be saved in the model folder. If any particular layer is require
 **Filter Visulization**
 
 ![filt1](/images/filt1.png)
+
+**Input Image Visulization for checking**
+
+![in1](/images/in1.png) 
+![in2](/images/in2.png)
+
+
