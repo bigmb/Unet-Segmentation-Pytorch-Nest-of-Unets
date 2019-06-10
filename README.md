@@ -66,3 +66,16 @@ Install all dependent libraries:
   **Nested Unet**
   
   ![nested](/images/nested.jpg)
+
+## 4. Visualization
+
+To plot the loss , Visdom would be required. The code is already written, just uncomment the required part.
+Gradient flow can be used too. Taken from (https://discuss.pytorch.org/t/check-gradient-flow-in-network/15063/10)
+
+Last layer will be saved in the model folder. If any particular layer is required , mention it in the line 361.
+
+**Layer Visulization**
+![l2](/images/l2.png)
+
+**Filter Visulization**
+![filt1](/images/filt1.png)
