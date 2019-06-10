@@ -87,8 +87,8 @@ Last layer will be saved in the model folder. If any particular layer is require
 
 **a) Original Image**
 
-![in1](/images/in1.png)
-<img src="https://github.com/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets/blob/master/images/in1.png" width="48">
+<img src="https://github.com/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets/blob/master/images/in1.png" width="480">
+
 **b) CenterCrop Image**
 
 ![in2](/images/in2.png){:height="50%" width="50%"}
