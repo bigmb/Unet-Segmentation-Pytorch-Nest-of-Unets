@@ -45,8 +45,19 @@ Install all dependent libraries:
   ```bash
   pip install -r requirements.txt
   ```
-  
-  ## 3. Types of Unet
+## 3. Run the file
+
+Add all your folders to this location
+```
+t_data = '' # Input data
+l_data = '' #Input Label
+test_image = '' #Image to be predicted while training
+test_label = '' #Label of the prediction Image
+test_folderP = '' #Test folder Image
+test_folderL = '' #Test folder Label for calculating the Dice score
+ ```
+ 
+  ## 4. Types of Unet
   
   **Unet**
   ![unet1](/images/unet1.png)
@@ -67,7 +78,7 @@ Install all dependent libraries:
   
   ![nested](/images/nested.jpg)
 
-## 4. Visualization
+## 5. Visualization
 
 To plot the loss , Visdom would be required. The code is already written, just uncomment the required part.
 Gradient flow can be used too. Taken from (https://discuss.pytorch.org/t/check-gradient-flow-in-network/15063/10)
@@ -97,7 +108,7 @@ Still have to tweak some parameters to get visualization. Have messed up this tr
 
 <img src="https://github.com/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets/blob/master/images/in2.png" width="480">
 
-## 5. Results
+## 6. Results
 
 **Dice Score for hippocampus segmentation**
 
