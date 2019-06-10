@@ -84,7 +84,7 @@ Last layer will be saved in the model folder. If any particular layer is require
 ![filt1](/images/filt1.png)
 
 **TensorboardX**
-
+Still have to tweak some parameters to get visualization. Have messed up this trying to make pytorch 1.1.0 working with tensorboard directly (and then came to know Currently it doesn't support anything apart from linear graphs)
 <img src="https://github.com/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets/blob/master/images/tensorb.png" width="280">
 
 **Input Image Visulization for checking**
