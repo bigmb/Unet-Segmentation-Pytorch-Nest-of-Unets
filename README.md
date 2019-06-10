@@ -49,4 +49,4 @@ Install all dependent libraries:
   ## 3. Types of Unet
   
   **Unet**
-  ![unet1](/imgages/unet1.png)
+  ![unet1](/images/unet1.png)
