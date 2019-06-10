@@ -97,6 +97,6 @@ Last layer will be saved in the model folder. If any particular layer is require
 
 **Dice Score**
 
-![Dice](/images/Dice.png)
+![dice](dice.png)
 
 
