@@ -93,4 +93,10 @@ Last layer will be saved in the model folder. If any particular layer is require
 
 ![in2](/images/in2.png)
 
+## 5. Results
+
+**Dice Score**
+
+![Dice](/images/Dice.png)
+
 
