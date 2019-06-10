@@ -87,11 +87,11 @@ Last layer will be saved in the model folder. If any particular layer is require
 
 **a) Original Image**
 
-![in1](/images/in1.png) 
+![in1](/images/in1.png){:height="50%" width="50%"}
 
 **b) CenterCrop Image**
 
-![in2](/images/in2.png)
+![in2](/images/in2.png){:height="50%" width="50%"}
 
 ## 5. Results
 
