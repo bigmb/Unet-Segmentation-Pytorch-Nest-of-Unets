@@ -85,7 +85,12 @@ Last layer will be saved in the model folder. If any particular layer is require
 
 **Input Image Visulization for checking**
 
+**a) Original Image**
+
 ![in1](/images/in1.png) 
+
+**b) CenterCrop Image**
+
 ![in2](/images/in2.png)
 
 
