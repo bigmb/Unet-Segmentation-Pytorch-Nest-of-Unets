@@ -4,7 +4,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/Jeetu95)
 [![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://github.com/Jeetu95/Brain-Tumor-Segmentation)
 [![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)](https://forthebadge.com)<br>
-[![HitCount](http://hits.dwyl.io/Jeetu95/Brain-Tumor-Segmentation.svg)](http://hits.dwyl.io/Jeetu95/Brain-Tumor-Segmentation)
+[![HitCount](http://hits.dwyl.io/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets.svg)](http://hits.dwyl.io/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Jeetu95/Brain-Tumor-Segmentation/graphs/commit-activity)
 [![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://github.com/Jeetu95/Brain-Tumor-Segmentation/issues)
