@@ -39,7 +39,7 @@ Clone the repo:
 ## 2. Requirements
 
 ```
-python>=3.6
+Python>=3.6
 torch>=0.4.0
 torchvision
 torchsummary
