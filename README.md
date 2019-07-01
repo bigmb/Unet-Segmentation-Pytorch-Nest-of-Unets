@@ -39,7 +39,7 @@ Clone the repo:
 ## 2. Requirements
 
 ```
-Python>=3.6
+python>=3.6
 torch>=0.4.0
 torchvision
 torchsummary
@@ -121,7 +121,7 @@ Still have to tweak some parameters to get visualization. Have messed up this tr
 ## 6. Results
 
 **Dice Score for hippocampus segmentation**
-ADNI Dataset
+ADNI-LONI Dataset
 
 <img src="https://github.com/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets/blob/master/dice.png" width="380">
 
