@@ -146,9 +146,9 @@ If you find it usefull for your work.
 }
 ```
 
-## 8. Article about Unets
-
+## 8. Blog about different Unets
 ```
 Coming up
 ```
+
 
