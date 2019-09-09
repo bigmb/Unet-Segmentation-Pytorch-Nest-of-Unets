@@ -148,7 +148,7 @@ If you find it usefull for your work.
 
 ## 8. Blog about different Unets
 ```
-Coming up
+In progress
 ```
 
 
