@@ -21,7 +21,7 @@ https://arxiv.org/abs/1802.06955
 https://arxiv.org/abs/1804.03999
 
 4) **RCNN-Attention Unet** - Attention R2U-Net : Just integration of two recent advanced works (R2U-Net + Attention U-Net)
-LeeJun Implementation - https://github.com/LeeJunHyun/Image_Segmentation.git
+<!--LeeJun Implementation - https://github.com/LeeJunHyun/Image_Segmentation.git -->
 
 5) **Nested UNet** - UNet++: A Nested U-Net Architecture for Medical Image Segmentation
 https://arxiv.org/abs/1807.10165
