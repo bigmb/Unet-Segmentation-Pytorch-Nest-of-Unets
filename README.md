@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets/graphs/commit-activity)
 [![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://github.com/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets/issues)
-
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/unet-a-nested-u-net-architecture-for-medical/semantic-segmentation-on-cityscapes-val)](https://paperswithcode.com/sota/semantic-segmentation-on-cityscapes-val?p=unet-a-nested-u-net-architecture-for-medical)
 
 Implementation of different kinds of Unet Models for Image Segmentation
 
