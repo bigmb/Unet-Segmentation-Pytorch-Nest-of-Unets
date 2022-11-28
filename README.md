@@ -1,7 +1,6 @@
 # Unet-Segmentation-Pytorch-Nest-of-Unets
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
-[![forthebadge](https://forthebadge.com/images/badges/built-by-neckbeards.svg)](https://github.com/bigmb)
 
 [![HitCount](http://hits.dwyl.io/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets.svg)](http://hits.dwyl.io/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
